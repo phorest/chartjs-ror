@@ -8,7 +8,7 @@ module Chartjs
 
       unless ::Chartjs.no_conflict
         ActionView::Base.class_eval do
-          %w[ line bar radar polar_area pie doughnut ].each do |type|
+          %w[ line bar horizontal_bar radar polar_area pie doughnut ].each do |type|
             alias :"#{type}_chart" :"chartjs_#{type}_chart"
           end
         end
